@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Blog Django Girls</title>
-    </head>
-    <body>
-        <header>
-            <h1><a href="/">Blog Django Girls</a></h1>
-        </header>
+<head>
+    <title>Blagues sur Mathis</title>
+</head>
+<body>
+    <h1>Blagues sur Mathis</h1>
+    <p>Bienvenue sur le site des blagues sur Mathis ! Cliquez sur le bouton ci-dessous pour rire un peu :</p>
+    <button onclick="faireBlague()">Cliquez ici pour une blague sur Mathis</button>
 
-        <article>
-            <time>publication: 14.06.2014, 12:14</time>
-            <h2><a href="">Mon premier article</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </article>
+    <script>
+        function faireBlague() {
+            // Liste de blagues sur Mathis
+            var blagues = [
+                "Pourquoi Mathis est-il toujours fatigué ? Parce qu'il fait pipi au lit et passe ses nuits à nettoyer ses draps !",
+                "Pourquoi Mathis a-t-il toujours une grosse tête de Baptout ? Parce qu'il a tellement d'intelligence que son cerveau ne tient pas dans son crâne !",
+                "Que fait Mathis lorsqu'il voit un livre ? Il le mange pour essayer d'obtenir de l'intelligence, mais ça ne marche pas !"
+            ];
 
-        <article>
-            <time>publication: 14.06.2014, 12:14</time>
-            <h2><a href="">Mon second article</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </article>
-    </body>
+            // Choix aléatoire d'une blague
+            var blague = blagues[Math.floor(Math.random() * blagues.length)];
+
+            // Affichage de la blague dans une boîte de dialogue
+            alert(blague);
+        }
+    </script>
+</body>
 </html>
