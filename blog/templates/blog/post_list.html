@@ -12,12 +12,13 @@
         }
         .person {
             margin: 20px;
-            padding: 10px;
+            padding: 20px;
             border-radius: 10px;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: inline-block;
             cursor: pointer;
+            transition: transform 0.3s ease;
         }
         .person:hover {
             transform: scale(1.05);
@@ -67,20 +68,10 @@
 
 <script>
     // Ajout d'interactivité avec JavaScript
-    document.getElementById('nassima').addEventListener('click', function() {
-        alert("Nassima, la mère respectée et aimée de tous, de Béb El Oued, elle sait bien faire à manger mais a tendance à pétille.");
-    });
-
-    document.getElementById('nora').addEventListener('click', function() {
-        alert("Nora, la pâtissière talentueuse, avec sa fille Noussayb, elle embellit le monde avec ses délicieux desserts.");
-    });
-
-    document.getElementById('hafsa').addEventListener('click', function() {
-        alert("Hafsa, la douaaolinguiste, avec ses lunettes et son savoir, elle unit les prières avec espoir.");
-    });
-
-    document.getElementById('laya').addEventListener('click', function() {
-        alert("Laya, la petite dernière, mignonne et pleine de vie, elle apporte à la famille une joie infinie.");
+    document.querySelectorAll('.person').forEach(item => {
+        item.addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
     });
 </script>
 
