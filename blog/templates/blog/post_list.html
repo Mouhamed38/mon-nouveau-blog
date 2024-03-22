@@ -1,19 +1,88 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Blog Django Girls</title>
-    </head>
-    <body>
-        <header>
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </header>
-        
-        {% for post in posts %}
-            <article>
-                <time>published: {{ post.published_date }}</time>
-                <h2><a href="">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
-            </article>
-        {% endfor %}
-    </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Famille</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .person {
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            cursor: pointer;
+        }
+        .person:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            color: #333;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Ma Chère Famille</h1>
+
+<div class="person" id="nassima">
+    <h2>Nassima, La Mère Bien-Aimée</h2>
+    <p>Respectée et aimée de tous,</p>
+    <p>De Béb El Oued, son cœur est doux.</p>
+    <p>Elle sait bien faire à manger,</p>
+    <p>Mais parfois, elle a tendance à pétiller.</p>
+</div>
+
+<div class="person" id="nora">
+    <h2>Nora, La Pâtissière Talentueuse</h2>
+    <p>Avec sa fille Noussayb, elle pâtisse,</p>
+    <p>Des desserts délicieux, elle l'embellisse.</p>
+    <p>Ses gâteaux sont des merveilles,</p>
+    <p>Que tout le monde accueille avec des merveilles.</p>
+</div>
+
+<div class="person" id="hafsa">
+    <h2>Hafsa, La Douaaolinguiste</h2>
+    <p>Avec ses lunettes et son savoir,</p>
+    <p>Elle pratique le duaaolinguage avec espoir.</p>
+    <p>Sa voix s'élève vers les cieux,</p>
+    <p>Unissant les prières, les vœux.</p>
+</div>
+
+<div class="person" id="laya">
+    <h2>Laya, La Petite Dernière</h2>
+    <p>Mignonne et pleine de vie,</p>
+    <p>Elle apporte à la famille une joie infinie.</p>
+    <p>Son rire résonne dans la maison,</p>
+    <p>Une lueur d'espoir, une douce saison.</p>
+</div>
+
+<script>
+    // Ajout d'interactivité avec JavaScript
+    document.getElementById('nassima').addEventListener('click', function() {
+        alert("Nassima, la mère respectée et aimée de tous, de Béb El Oued, elle sait bien faire à manger mais a tendance à pétille.");
+    });
+
+    document.getElementById('nora').addEventListener('click', function() {
+        alert("Nora, la pâtissière talentueuse, avec sa fille Noussayb, elle embellit le monde avec ses délicieux desserts.");
+    });
+
+    document.getElementById('hafsa').addEventListener('click', function() {
+        alert("Hafsa, la douaaolinguiste, avec ses lunettes et son savoir, elle unit les prières avec espoir.");
+    });
+
+    document.getElementById('laya').addEventListener('click', function() {
+        alert("Laya, la petite dernière, mignonne et pleine de vie, elle apporte à la famille une joie infinie.");
+    });
+</script>
+
+</body>
 </html>
