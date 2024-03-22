@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Famille</title>
+    <title>Ma Famille en Amusement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f2f2f2;
             text-align: center;
+            padding: 20px;
         }
         .person {
             margin: 20px;
@@ -18,61 +20,72 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: inline-block;
             cursor: pointer;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease-in-out;
+            color: #333;
+            width: 250px;
         }
         .person:hover {
             transform: scale(1.05);
         }
         h1 {
-            color: #333;
-            font-size: 36px;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 48px;
+            color: #4CAF50;
             margin-bottom: 30px;
+        }
+        .icon {
+            font-size: 36px;
+            margin-bottom: 10px;
         }
     </style>
 </head>
 <body>
 
-<h1>Ma Chère Famille</h1>
+<h1>Ma Famille en Amusement</h1>
 
-<div class="person" id="nassima">
+<div class="person" onclick="showMessage('nassima')">
+    <i class="fas fa-users icon"></i>
     <h2>Nassima, La Mère Bien-Aimée</h2>
-    <p>Respectée et aimée de tous,</p>
-    <p>De Béb El Oued, son cœur est doux.</p>
-    <p>Elle sait bien faire à manger,</p>
-    <p>Mais parfois, elle a tendance à pétiller.</p>
+    <p>Clique ici pour découvrir son secret culinaire !</p>
 </div>
 
-<div class="person" id="nora">
+<div class="person" onclick="showMessage('nora')">
+    <i class="fas fa-birthday-cake icon"></i>
     <h2>Nora, La Pâtissière Talentueuse</h2>
-    <p>Avec sa fille Noussayb, elle pâtisse,</p>
-    <p>Des desserts délicieux, elle l'embellisse.</p>
-    <p>Ses gâteaux sont des merveilles,</p>
-    <p>Que tout le monde accueille avec des merveilles.</p>
+    <p>Clique ici pour voir ses dernières créations !</p>
 </div>
 
-<div class="person" id="hafsa">
+<div class="person" onclick="showMessage('hafsa')">
+    <i class="fas fa-praying-hands icon"></i>
     <h2>Hafsa, La Douaaolinguiste</h2>
-    <p>Avec ses lunettes et son savoir,</p>
-    <p>Elle pratique le duaaolinguage avec espoir.</p>
-    <p>Sa voix s'élève vers les cieux,</p>
-    <p>Unissant les prières, les vœux.</p>
+    <p>Clique ici pour entendre ses prières spéciales !</p>
 </div>
 
-<div class="person" id="laya">
+<div class="person" onclick="showMessage('laya')">
+    <i class="fas fa-child icon"></i>
     <h2>Laya, La Petite Dernière</h2>
-    <p>Mignonne et pleine de vie,</p>
-    <p>Elle apporte à la famille une joie infinie.</p>
-    <p>Son rire résonne dans la maison,</p>
-    <p>Une lueur d'espoir, une douce saison.</p>
+    <p>Clique ici pour voir sa photo la plus mignonne !</p>
 </div>
 
 <script>
-    // Ajout d'interactivité avec JavaScript
-    document.querySelectorAll('.person').forEach(item => {
-        item.addEventListener('click', function() {
-            this.classList.toggle('active');
-        });
-    });
+    function showMessage(person) {
+        switch(person) {
+            case 'nassima':
+                alert("Nassima, la mère respectée et aimée de tous, de Béb El Oued, elle sait bien faire à manger mais a tendance à pétille.");
+                break;
+            case 'nora':
+                alert("Nora, la pâtissière talentueuse, avec sa fille Noussayb, elle embellit le monde avec ses délicieux desserts.");
+                break;
+            case 'hafsa':
+                alert("Hafsa, la douaaolinguiste, avec ses lunettes et son savoir, elle unit les prières avec espoir.");
+                break;
+            case 'laya':
+                alert("Laya, la petite dernière, mignonne et pleine de vie, elle apporte à la famille une joie infinie.");
+                break;
+            default:
+                alert("Erreur: personne non trouvée.");
+        }
+    }
 </script>
 
 </body>
